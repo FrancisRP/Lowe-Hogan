@@ -1,0 +1,111 @@
+.btn, .fl-button, input[type="submit"], .uabb-button {
+	background-color: $green !important;
+	color: #fff;
+	text-transform: uppercase !important;
+	font-weight: $light !important;
+	padding: 29px 30px !important;
+	border: 1px solid transparent !important;
+	border-radius: 0 !important;
+	cursor: pointer; 
+	span {
+		font-weight: $light;
+	}
+	@include mq('tablet') {
+		background-color: $green !important;
+		color: #fff;
+		text-transform: uppercase !important;
+		font-weight: $light !important;
+		padding: 29px 73px !important;
+		border: 1px solid transparent !important;
+		border-radius: 0 !important;
+	}
+	@include font(1.9rem);
+	@include transition(fast);
+	&:hover {
+		color: #000 !important;
+		border: 1px solid #000 !important;
+		background: #fff !important;
+		span {
+			color: #000 !important;
+		}
+	}
+	* {
+		color: #fff !important;
+		font-weight: $bold;
+		text-transform: uppercase;
+		@include font(1.7rem);
+		letter-spacing: 2px;
+	}
+}
+
+.btn--hollow {
+	a.fl-button {
+		border: 1px solid #000 !important;
+		background-color: transparent !important;
+		* {
+			color: #000 !important;
+		}
+		&:hover {
+			background-color: $green !important;
+			* {
+				color: #fff !important;
+			}
+		}
+	}
+}
+
+.btn--hollow-light {
+	a.fl-button {
+		border: 1px solid #fff !important;
+		background-color: transparent !important;
+		* {
+			color: #fff !important;
+		}
+		&:hover {
+			background-color: #fff !important;
+			* {
+				color: $primary !important;
+			}
+		}
+	}
+}
+
+.btn--hollow-green {
+	a.fl-button {
+		border: 1px solid $primary !important;
+		background-color: #fff !important;
+		* {
+			color: #000 !important;
+		}
+		&:hover {
+			background-color: $green !important;
+			* {
+				color: #fff !important;
+			}
+		}
+	}
+}
+
+.fl-button-group-buttons {
+	.fl-button-wrap, .fl-button-group-button {
+		width: 100% !important;
+		@include mq('phablet') {
+			width: auto !important;
+		}
+	}
+	.fl-button-group-button:not(:first-child) {
+		a {
+			background: transparent !important;
+			border: 1px solid $primary !important;
+			span {
+				color: $text-dark !important;
+			}
+			&:hover {
+				background: $primary !important;
+				span {
+					color: $text-light !important;
+				}
+			}
+		}
+	}
+}

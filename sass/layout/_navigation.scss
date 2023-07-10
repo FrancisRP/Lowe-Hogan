@@ -1,0 +1,128 @@
+.main-navigation {
+	margin-left: auto;
+	display: none;
+	@include mq('desktop-wide') {
+		display: flex;
+	}
+	#menu-main-nav {
+		display: flex;
+	}
+	ul.menu {
+		> li.menu-item {
+			margin-right: 0;
+			padding: 23px 0;
+			> a {
+				font-weight: 300;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				color: #333;
+				padding: 24px 20px;
+				font-weight: $light;
+				@include font(1.8rem);
+				@include transition(fast);
+				&:hover {
+					text-decoration: none;
+					background: $green;
+					color: #fff;
+				}
+			}
+			&.menu-item-has-children {
+				padding-right: 10px;
+				position: relative;
+				&:before {
+					content: "\f078";
+					color: #333;
+					float: right;
+					font-size: 1.2rem;
+					@include fontawesome;
+					@include transition(fast);
+				}
+				&:hover {
+					background: $primary;
+					&:before {
+						color: $text-light;
+					}
+					.sub-menu {
+						display: block;
+					}
+					> a {
+						background-color: $primary;
+						color: $text-light;
+					}
+				}
+				.sub-menu {
+					display: none;
+					top: 73px;
+					left: 0;
+					z-index: 999;
+					@include mq(tablet) {
+						position: absolute;
+						min-width: 220px;
+						background: $gray;
+						width: 100%;
+					}
+					li {
+						width: 100%;
+					}
+					a {
+						background-color: $primary;
+						color: #fff !important;
+						@include mq(tablet) {
+							padding: 10px;
+							color: $text-dark;
+							font-weight: $light;
+							display: inline-block;
+							text-transform: uppercase;
+							letter-spacing: 1px;
+							width: 100%;
+							@include font(1.6rem);
+							&:before {
+								content: "\f054";
+								margin: 0 15px 0 10px;
+								color: #fff;
+								@include fontawesome;
+							}
+							&:hover {
+								opacity: 0.7;
+								color: #fff !important;
+								text-decoration: none;
+								&:before {
+									color: #fff;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.btn {
+		font-weight: $regular;
+		span {
+			margin-right: 5px;
+		}
+		@include mq(tablet) {
+			margin-left: 10px;
+		}
+	}
+}
+
+
+
+.mobile-navigation {
+	.menu-item-has-children {
+		> a {
+			&:after {
+				content: "\f0d7";
+				margin-left: 10px;
+				@include fontawesome;
+			}
+		}
+		ul.sub-menu {
+			display: none;
+			> li > a{
+				padding-left: 40px;
+			}
+		}
+	}
+}

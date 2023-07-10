@@ -1,0 +1,43 @@
+// ==[ Typography ]== //
+
+@function strip-unit($number) {
+	@return $number / ($number * 0 + 1);
+}
+
+h1, .h1 {
+	font-family: 'Playfair Display';
+	@include font(5rem);
+	font-weight: $bold;
+	margin-top: 0;
+	@include mq(tablet) {
+		@include font(6rem);
+	}
+}
+
+h2, .h2 {
+	font-family: 'Playfair Display';
+	@include font(5rem);
+	font-weight: $regular;
+	.fl-heading-text {
+		span {
+			color: $blue;
+		}
+	}
+}
+
+h3 {
+	@include font(2.8rem);
+	font-weight: $bold;
+}
+
+h4 {
+	@include font(1.8rem);
+	text-transform: uppercase;
+	font-weight: $bold;
+}
+
+h4,
+h5,
+h6 {
+	@include responsive-font(16px, 18px)
+}

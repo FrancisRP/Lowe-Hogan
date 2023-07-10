@@ -1,0 +1,46 @@
+.info-boxes {
+	.uabb-infobox-content {
+		background-color: #fff;
+		box-shadow: 0px 4px 77px rgba(0, 0, 0, 0.21);
+	}
+	.uabb-image-content {
+		width: 100%;
+		img {
+			width: 100% !important;
+		}
+	}
+	.uabb-infobox-title-wrap {
+		padding: 20px 20px 0 40px;
+		display: inline-flex;
+		&:before {
+			counter-increment: infobox;
+			content: "0"counter(infobox);
+			float: left;
+			color: $blue;
+			display: inline-block;
+			font-weight: $bold;
+			opacity: 0.3;
+			border-bottom: 1px solid $blue;
+			margin-left: -40px;
+			margin-right: 20px;
+			width: 60px;
+			padding-left: 20px;
+			@include font(4rem);
+		}
+	}
+	.uabb-infobox-text-wrap {
+		padding: 0 20px 20px 80px;
+		p {
+			color: $text-dark;
+		}
+	}
+	&--no-shadows {
+		.uabb-infobox-content {
+			background-color: transparent;
+			box-shadow: none;
+		}
+		.uabb-infobox-title-wrap:before {
+			border-bottom: 0;
+		}
+	}
+}

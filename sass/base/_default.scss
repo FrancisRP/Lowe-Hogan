@@ -1,0 +1,95 @@
+// ---- Default theme configuration & setup.
+// ---- Contains commonly used default styles for any typical project.
+// ---- These styles may safely be removed/overwritten when starting a new project.
+
+// --------------- FONTS
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
+
+// --------------- HTML ELEMENTS
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+// --------------- SITE LAYOUT
+
+.container {
+	position: relative;
+	@include mq(tablet) {
+		max-width: 991px;
+	}
+	@include mq(tablet-wide) {
+		max-width: 1200px;
+	}
+	@include mq(desktop-wide) {
+		max-width: 1530px;
+	}
+}
+
+.site-content {
+	padding: 0;
+	a {
+		&:hover {
+			border-bottom: 2px solid #000;
+		}
+	}
+}
+
+.mobile-navigation {
+	ul {
+		padding-left: 0;
+		> li {
+			list-style: none;
+			border-bottom: 1px solid darken($primary, 3%);
+			a {
+				color: #fff;
+				padding: 10px 20px;
+				display: inline-block;
+				width: 100%;
+				&:hover {
+					text-decoration: none;
+					background: darken($primary, 3%);
+				}
+				&:focus {
+					background: darken($primary, 3%);
+				}
+			}
+		}
+	}
+}
+
+.section {
+	padding: 60px 0;
+}
+
+.section-heading {
+	margin-bottom: 30px;
+}
+
+// --------------- BEAVER BUILDER
+
+.fl-row-content {
+	padding: 40px 0;
+}
+
+.fl-col-small:not(.fl-col-small-full-width) {
+	@include mq(tablet, max) {
+		max-width: 100%;
+	}
+}
+
+.fl-module-photo-gallery {
+	.uabb-photo-gallery-item {
+		.uabb-gallery-img {
+			max-height: 150px;
+			height: 150px !important;
+			object-fit: cover;
+			@include mq(tablet-small) {
+				max-height: 15em;
+				height: 15em !important;
+			}
+		}
+	}
+}

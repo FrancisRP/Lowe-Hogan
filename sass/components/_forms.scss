@@ -1,0 +1,227 @@
+//------------- Gravity form defaults -------------
+
+.gform_wrapper {
+	.gform_fields {
+		padding: 0;
+	}
+	.hidden_label {
+		label {
+			@extend .screen-reader-text;
+		}
+	}
+	.gfield {
+		list-style: none;
+		input {
+			padding: 10px;
+		}
+		textarea {
+			width: 100%;
+			border: 0 !important;
+			border-bottom: 3px solid #0d653b !important;
+		}
+	}
+	.gform_validation_container {
+		@extend .screen-reader-text;
+	}
+}
+
+
+//------------- Main hero form -------------
+
+.hero-form {
+	width: 100%;
+	box-shadow: -1px 5px 20px -1px #CECECE;
+	@include mq(desktop) {
+		
+	}
+	&__inner {
+		background: #fff;
+		padding: 20px !important;
+		position: relative;
+		@include mq(tablet-wide) {
+			margin-top: 0;
+		}
+	}
+	> .container {
+		position: initial;
+	}
+	#gform_wrapper_1 {
+		#gform_1 {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			.gform_body {
+				@include mq(tablet) {
+					max-width: 70% !important;
+				}
+				@include mq(desktop-wide) {
+					max-width: 100% !important;
+				}
+			}
+			.gform_fields {
+				display: flex;
+				flex-wrap: wrap;
+				@include mq(tablet) {
+					flex-wrap: nowrap;
+				}
+			}
+			.gfield {
+				margin: 0 10px;
+				flex: 100%;
+				@include mq(desktop-wide) {
+					min-width: 254px;
+					&:nth-child(4) {
+						min-width: 181px;
+					}
+					&:nth-child(5) {
+						min-width: 181px;
+					}
+				}
+				input {
+					border: 0;
+					border-bottom: 3px solid #C4C4C4;
+					padding: 0;
+					width: 100%;
+					outline: none;
+				}
+				.gfield_required  {
+					display: none;
+				}
+				.gfield_label {
+					letter-spacing: 0.5px;
+				}
+			}
+
+			.gform_footer {
+				.gform_button {
+					background-color: transparent !important;
+					background: url('http://lowehogan.localhost/wp-content/uploads/2022/10/icon-search.png');
+					display: block;
+					width: 100%;
+					height: 100%;
+					background-repeat: no-repeat;
+					background-position: 50% 50%;
+					padding: 11px 47px !important;
+					text-indent: -99999999px;
+					border: 1px solid $primary !important;
+					&:hover {
+						background: url('http://lowehogan.localhost/wp-content/uploads/2022/10/white-icon.png') !important;
+						background-repeat: no-repeat !important;
+						display: block;
+						width: 100%;
+						height: 100%;
+						background-position: 50% 50% !important;
+						background-color: $primary !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+//------------- Bottom contact form -------------
+
+#gform_wrapper_2 {
+	#gform_fields_2 {
+		@include mq(tablet) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		li.gfield {
+			flex: 50%;
+			@include mq(tablet) {
+				padding: 0 10px;
+			}
+			input {
+				width: 100%;
+				border: 0;
+				border-bottom: 3px solid $primary;
+				padding: 10px 0 20px 0;
+			}
+		}
+		.gform_validation_container {
+			@extend .screen-reader-text;
+		}
+	}
+	.gform_footer {
+		margin-top: 20px;
+		.gform_button {
+			padding: 23px 30px !important;
+			letter-spacing: 2px;
+			@include mq('tablet') {
+				padding: 23px 94px !important;
+			}
+		}
+	}
+}
+
+
+#gform_wrapper_5 {
+	#gform_fields_5 {
+		@include mq(tablet) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.gfield {
+			width: 100%;
+			margin: 0 auto;
+			@include mq(tablet) {
+				padding: 0 10px;
+				width: 50%;
+			}
+			input {
+				background-color: transparent;
+				width: 100%;
+				border: 0;
+				border-bottom: 3px solid #fff;
+				padding: 10px 0 20px 0;
+				color: #fff;
+				&::placeholder {
+					color: #fff;
+				}
+			}
+		}
+	}
+	.gform_footer {
+		margin-top: 20px;
+		text-align: center;
+		.gform_button {
+			padding: 23px 94px !important;
+			background: #fff !important;
+			border: 1px solid #000;
+			color: #333;
+			letter-spacing: 2px;
+			&:hover {
+				border: 1px solid #fff !important;
+				background-color: $primary !important;
+				color: #fff !important;
+			}
+		}
+	}
+}
+
+//------------- Sidebar contact form -------------
+
+.sidebar-contact-form {
+	.fl-module-content {
+		box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+		background: #fff;
+		padding: 20px;
+	}
+	.uabb-gf-form-desc {
+		@include font(2.3rem);
+	}
+	.gfield {
+		input,
+		textarea {
+			width: 100%;
+			border: 0;
+			border-bottom: 3px solid $primary !important;
+		}
+	}
+	.gform_footer {
+		text-align: center !important;
+	}
+}

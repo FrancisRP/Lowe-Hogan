@@ -1,0 +1,130 @@
+//----- DO NOT REMOVE BELOW ------
+.skip-link {
+	position: absolute;
+	top: 0;
+	z-index: 9999;
+	right: 100%;
+	padding: 5px;
+	padding: 0.5rem;
+	font-size: 20px;
+	font-size: 2rem;
+	color: #000;
+	background: #fff;
+	&:focus {
+		right: auto;
+	}
+}
+//----- DO NOT REMOVE ABOVE ------
+
+.site-header {
+	padding: 10px 0;
+	top: 0;
+	width: 100%;
+	z-index: 3;
+	font-family: 'Montserrat';
+	@include transition(fast);
+	.container {
+		display: flex;
+		align-items: center;
+		@include mq(tablet-wide) {
+			display: block;
+		}
+	}
+	.site-branding {
+		img {
+			height: auto;
+			max-width: 200px;
+			padding: 10px;
+			background-color: #fff;
+		}
+	}
+
+	nav {
+		ul {
+			margin: 0;
+			padding: 0;
+			> li {
+				display: inline-block;
+			}
+			> li > a {
+				padding: 0 10px;
+			}
+		}
+		.main-navigation__number {
+			display: flex;
+			align-items: center;
+			gap: 15px;
+			padding: 25px;
+			a {
+				display: inline-grid;
+				letter-spacing: 1px;
+				color: #333;
+			}
+			.fa-phone-alt {
+				color: #333;
+			}
+			&:hover {
+				background: transparent;
+				a,
+				.fa-phone-alt {
+					color: $primary;
+				}
+			}
+		}
+	}
+	&.sticky {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 100;
+		padding: 10px;
+		box-shadow: 10px 2px 5px rgba(0, 0, 0, 0.3);
+		img {
+			max-width: 160px;
+		}
+		.btn {
+			padding: 7px 10px !important;
+		}
+		&.sticky--dark {
+			background-color: #000;
+			color: $text-dark;
+			.btn {
+				background-color: #fff !important;
+				color: $text-dark;
+				span {
+					color: $text-dark !important;
+				}
+				&:hover {
+					color: #fff !important;
+					background-color: darken(#fff, 10%) !important;
+				}
+			}
+		}
+		&.sticky--light {
+			background-color: #fff;
+			color: $text-dark;
+			.main-navigation ul.menu > li.menu-item > a {
+				&:hover {
+					color: #fff !important;
+				}
+			}
+			
+			.slideout-navicon {
+				color: $text-dark;
+				
+			}
+			
+		}
+	}
+	&.sticky ~ .site-content {
+		padding-top: 150px;
+	}
+}
+
+.logged-in {
+	.site-header {
+		&.sticky {
+			top: 32px;
+		}
+	}
+}

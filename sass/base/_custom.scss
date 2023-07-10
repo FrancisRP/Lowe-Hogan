@@ -1,0 +1,135 @@
+@include mq(tablet-medium) {
+	.site-footer {
+		&__contact {
+			p {
+				white-space: normal;
+			}
+		}
+	}	
+}
+
+@include mq(desktop) {
+	.site-footer {
+		&__contact {
+			p {
+				white-space: nowrap;
+			}
+		}
+	}
+}
+
+.row-no-padding {
+	.fl-row-content {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+
+.z-index {
+	.fl-row-content-wrap {
+		z-index: 1;
+	}
+}
+
+.home-info-box {
+	.uabb-infobox-content {
+		padding: 50px 50px;
+			@include mq('tablet-medium') {
+				padding: 114px 50px;
+			}
+		}
+		a {
+			&:hover {
+				border-bottom: 0 !important;
+				box-shadow: 0px 4px 78px 0px rgba(0,0,0,0.2);
+			}
+	}
+}
+
+.contact-info-list {
+	.uabb-info-list-content {
+		display: block !important;
+		width: 100% !important;
+		a {
+			color: #000;
+			&:hover {
+				color: $primary;
+			}
+		}
+		@include mq('tablet-medium') {
+			display: flex !important;
+		}
+		.uabb-info-list-title {
+			width: 100%;
+			@include mq('tablet-medium') {
+				width: 35%;
+				
+			}
+		}
+	}
+}
+
+.meet-the-team {
+	.uabb-module-content {
+		button {
+			i {
+				font-size: 40px;
+				&:hover {
+					font-size: 40px;
+				}
+			}
+		}
+		.uabb-post-thumbnail   {
+			a {
+				pointer-events: none;
+				cursor: default;
+				letter-spacing: 0.5px;
+			}
+		}
+		.uabb-blog-post-content {
+			.uabb-post-heading {
+				a {
+					pointer-events: none;
+					cursor: default;
+					letter-spacing: 0.5px;
+				}
+			}
+			.uabb-cat-links {
+				a {
+					pointer-events: none;
+					cursor: default;
+					letter-spacing: 0.5px;
+				}
+			}
+		}
+	}
+}
+
+.info-box-bio {
+	.uabb-button {
+		padding: 20px 35px !important;
+	}
+
+	.team-position {
+		text-align: center;
+		font-size: 20px !important;
+		text-transform: uppercase;
+		font-weight: 500 !important;
+	}
+
+	.team-description {
+		font-size: 20px !important;
+	}
+}
+
+.uabb-modal-parent-wrapper {
+	.popup-name {
+		font-family: $base-title-font-family !important;
+	}
+
+	.member-position {
+		font-size: 20px;
+		font-weight: 500;
+	}
+}
+

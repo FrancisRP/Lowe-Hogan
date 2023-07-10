@@ -1,0 +1,62 @@
+html {
+	font-size: 62.5%;
+	position: relative;
+	overflow-x: hidden;
+}
+
+body {
+	@include responsive-font;
+	font-family: $base-font-family;
+	font-weight: $base-font-weight;
+	line-height: $base-line-height;
+	counter-reset: infobox;
+	position: relative;
+	overflow-x: hidden;
+}
+
+p {
+	@include font(1.7rem);
+	line-height: 30px;
+}
+
+a {
+	color: $primary;
+	&:hover {
+		text-decoration: none;
+		color: $text-dark;
+	}
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-Bold.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-Regular.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('../fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+

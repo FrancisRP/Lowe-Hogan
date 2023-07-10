@@ -1,0 +1,19 @@
+.testimonial {
+    .uabb-testimonial {
+        background: #fff !important;
+        padding: 0 30px;
+        @include mq('tablet') {
+            background: #fff !important;
+            padding: 0 100px;
+        }
+        .uabb-rating {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+        }
+        .uabb-testimonial-author-description {
+            margin-top: 50px;
+        }
+    }
+}

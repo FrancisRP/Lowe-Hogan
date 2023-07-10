@@ -1,0 +1,18 @@
+.icon-grid {
+	&__icon {
+		.fl-icon {
+			border: 1px solid #fff;
+			border-radius: 100%;
+			padding: 20px;
+			text-align: center;
+			i {
+				text-align: center;
+			}
+		}
+		.fl-icon-text {
+			p {
+				@include font(2.8rem);
+			}
+		}
+	}
+}

@@ -1,0 +1,365 @@
+.post-single {
+    &__header {
+        position: relative;
+    }
+    &__image {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        max-height: 600px;
+        min-height: 300px;
+        width: 100%;
+        @include overlay($blue-alt);
+    }
+    &__title-wrapper {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        width: 100%;
+    }
+    &__page-title {
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 30px;
+    }
+    &__content {
+        padding: 60px 0;
+    }
+    &__title {
+        @include font(4.6rem);
+        margin-bottom: 30px;
+    }
+    &__share-icons {
+        padding: 30px 0;
+        border-top: 1px solid $gray--light;
+        display: flex;
+        align-items: center;
+        h3 {
+            margin-right: 10px;
+        }
+        a {
+            margin: 0 5px;
+            background: $primary;
+            padding: 5px;
+            border-radius: 100%;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include transition(fast);
+            &:hover {
+                border-bottom: 0;
+                background: $blue-alt;
+            }
+        }
+        i {
+            @include font(2.4rem);
+        }
+    }
+    &__author {
+        border-top: 1px solid $gray--light;
+        border-bottom: 1px solid $gray--light;
+        padding: 30px 0;
+        margin-bottom: 30px;
+        color: $blue-alt;
+    }
+    .related-posts {
+        &__title {
+            margin-top: 10px;
+        }
+        &__category {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $text-dark;
+            margin-bottom: 10px;
+        }
+        &__item {
+            margin-bottom: 30px;
+            @include mq(tablet) {
+                margin-bottom: 0;
+            }
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.single-post {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        margin-bottom: 30px;
+    }
+
+    .post {
+        .social-media-share {
+            .uabb-social-share-wrap {
+                .uabb-social-share-link-wrap {
+                    &:not(:last-child) {
+                        margin-right: 10px;
+                    }
+
+                    .uabb-module-content {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: center;
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 100px;
+                        background-color: #098de0;
+
+                        &:hover {
+                            background-color: rgba(
+                                $color: #007eb5,
+                                $alpha: 0.2
+                            );
+                        }
+
+                        .uabb-icon-wrap {
+                            .uabb-icon {
+                                i {
+                                    &::before {
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .fl-module-fl-author-bio {
+            .fl-module-content {
+                background-color: transparent;
+
+                .fl-author-bio-thumb {
+                    img {
+                        border-radius: 100%;
+                    }
+                }
+
+                .fl-author-bio-content {
+                    h3 {
+                        font-family: 'Playfair Display';
+                    }
+                }
+            }
+        }
+    }
+
+    .right-sidebar {
+        .fl-col-content {
+            .fl-col-group {
+                margin: 0 10px 30px;
+                padding: 30px;
+                
+                .fl-module-content {
+                    margin: 0;
+
+                    .fl-heading,
+                    .fl-widget .widgettitle {
+                        margin-bottom: 0;
+                        font-size: 30px;
+                        font-weight: 700;
+
+                        span {
+                            font-size: 30px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+
+            .search-bar {
+                .fl-search-form {
+                    .fl-search-form-wrap {
+                        margin-top: 20px;
+                        padding: 0;
+
+                        .fl-search-form-fields {
+                            .fl-search-form-input-wrap {
+                                .fl-form-field {
+                                    input {
+                                        padding: 0 10px 20px 0;
+                                        border: none;
+                                        border-radius: 0;
+                                        border-bottom: 3px solid #000;
+
+                                        &:focus {
+                                            outline: none;
+                                        }
+                                    }
+
+                                    ::-webkit-input-placeholder {
+                                        /* Edge */
+                                        color: #000;
+                                        font-size: 16px;
+                                        font-weight: 700;
+                                    }
+
+                                    :-ms-input-placeholder {
+                                        /* Internet Explorer 10-11 */
+                                        color: #000;
+                                        font-size: 16px;
+                                        font-weight: 700;
+                                    }
+
+                                    ::placeholder {
+                                        color: #000;
+                                        font-size: 16px;
+                                        font-weight: 700;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .related-posts {
+                .fl-widget {
+                    ul {
+                        margin: 20px 0 0;
+                        padding: 0;
+                        list-style: none;
+
+                        li {
+                            &:not(:last-child) {
+                                margin-bottom: 20px;
+                            }
+
+                            a {
+                                color: $primary!important;
+                                font-size: 22px;
+                                font-weight: 600;
+                                &:hover {
+                                    border: none;
+                                    opacity: 0.7;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .read-next-post {
+                .uabb-post-wrapper {
+                    margin-top: 20px;
+                    margin-bottom: 0;
+                    border: none;
+
+                    .uabb-blog-posts-shadow {
+                        background-color: transparent;
+                        box-shadow: none;
+
+                        .uabb-blog-post-inner-wrap {
+                            .uabb-post-thumbnail {
+                                width: 100%;
+
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                        }
+
+                        .uabb-blog-post-content {
+                            padding: 20px 0 0;
+                            background-color: transparent;
+
+                            .uabb-post-meta {
+                                margin-bottom: 5px;
+
+                                .uabb-cat-links {
+                                    a {
+                                        color: #098de0;
+                                        font-weight: 700;
+                                    }
+                                }
+                            }
+
+                            .uabb-post-heading {
+                                margin-bottom: 10px;
+                            }
+
+                            .uabb-blog-posts-description {
+                                color: #000;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .get-started-form {
+                .uabb-gf-style {
+                    padding: 0;
+
+                    .uabb-gf-form-title {
+                        span {
+                            color: #098de0;
+                        }
+                    }
+
+                    .uabb-gf-form-desc {
+                        margin: 10px 0;
+                    }
+
+                    .gform_wrapper {
+                        .gform_body {
+                            .gform_fields {
+                                .gfield {
+                                    width: 100%;
+
+                                    input {
+                                        width: 100%;
+                                        padding: 0 10px 20px 0 !important;
+                                        border: none;
+                                        border-radius: 0;
+                                        border-bottom: 3px solid #000;
+
+                                        &:focus {
+                                            outline: none;
+                                        }
+                                    }
+
+                                    ::-webkit-input-placeholder {
+                                        /* Edge */
+                                        color: #000;
+                                        font-size: 16px;
+                                        font-weight: 700;
+                                    }
+
+                                    :-ms-input-placeholder {
+                                        /* Internet Explorer 10-11 */
+                                        color: #000;
+                                        font-size: 16px;
+                                        font-weight: 700;
+                                    }
+
+                                    ::placeholder {
+                                        color: #000;
+                                        font-size: 16px;
+                                        font-weight: 700;
+                                    }
+                                }
+                            }
+                        }
+
+                        .gform_footer {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

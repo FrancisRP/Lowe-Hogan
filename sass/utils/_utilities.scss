@@ -1,0 +1,167 @@
+// ---------- Use this file for global classes or other helper utilities
+
+
+//------------- ADA - DO NOT REMOVE -------------
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+//------------- General Layout -------------
+
+.content {
+	&--light {
+		.fl-row-content {
+			color: #fff;
+		}
+	}
+}
+
+.no-spacing {
+	padding: 0;
+	margin: 0;
+	.fl-row-content {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+//------------- Typography -------------
+
+.font--bold {
+	font-weight: $bold;
+}
+
+.font--semibold {
+	font-weight: $semibold;
+}
+
+.font--normal {
+	font-weight: $regular;
+}
+
+.font--light {
+	font-weight: $light;
+}
+
+//------------- Colors -------------
+
+.color--blue {
+	color: $blue;
+}
+
+.color--blue-alt {
+	color: $blue-alt;
+}
+
+.color--lt-blue {
+	color: $lt-blue;
+}
+
+.color--gray {
+	color: $gray;
+}
+
+.color--gray--light {
+	color: $gray--light;
+}
+
+.color--gray--dark {
+	color: $gray--dark;
+}
+
+
+//------------- Icons -------------
+
+.arrow-before {
+	&:before {
+		content: "";
+		background-image: url('../images/vector-arrow.svg');
+		width: 78px;
+		height: 78px;
+		background-size: 78px;
+		display: block;
+	}
+}
+
+.arrow-after {
+	&:after {
+		content: "";
+		background-image: url('../images/vector-arrow.svg');
+		width: 78px;
+		height: 78px;
+		background-size: 78px;
+		display: block;
+		float: right;
+		transform: scale(-1);
+	}
+}
+
+.filter-icon {
+	display: inline-flex;
+	flex-direction: column;
+	span {
+		background-color: $gray--dark;
+		display: inline-block;
+		height: 3px;
+		border-radius: 10px;
+		margin-bottom: 3px;
+		margin-left: auto;
+		margin-right: auto;
+		&:nth-of-type(1) {
+			width: 30px;
+		}
+		&:nth-of-type(2) {
+			width: 20px;
+		}
+		&:nth-of-type(3) {
+			width: 10px;
+		}
+	}
+}
+
+//------------- Custom widths -------------
+
+.mw-75 {
+	max-width: 75%;
+	margin: 0 auto;
+}
+
+.mw-50 {
+	max-width: 50%;
+	margin: 0 auto;
+}
+
+//------------- Special Headings -------------
+
+.heading-separator {
+	@include font(2.3rem);
+	text-transform: uppercase;
+	font-weight: 300;
+	color: $lt-blue;
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	justify-content: center;
+	&:before {
+		content: "";
+		display: block;
+		height: 4px;
+		width: 150px;
+		background-color: $lt-blue;
+	}
+	&:after {
+		content: "";
+		display: block;
+		height: 4px;
+		width: 150px;
+		background-color: $lt-blue;
+	}
+}

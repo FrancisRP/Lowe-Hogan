@@ -1,0 +1,151 @@
+.post-index {
+	background: #fff;
+	padding: 60px 0;
+	a {
+		color: $blue-alt;
+	}
+	&__item {
+		margin-bottom: 40px;
+	}
+	&__title {
+		@include font(2.6rem);
+		font-family: 'Playfair Display';
+		a {
+			color: $primary;
+			&:hover {
+				border: none;
+			}
+		}
+	}
+	&__image {
+		img {
+			width: 100%;
+		}
+	}
+	&__meta {
+		padding: 20px 20px 0;
+		@include mq(tablet) {
+			padding: 0 90px;
+		}
+	}
+	&__excerpt {
+		line-height: 1.3;
+	}
+	&__category {
+		text-transform: uppercase;
+		font-weight: $bold;
+		@include font(1.6rem);
+		ul {
+			padding: 0;
+		}
+		li {
+			list-style: none;
+		}
+	}
+	&__author {
+		margin-bottom: 20px;
+	}
+	&__read-more {
+		a {
+			font-weight: $regular;
+			color: $primary;
+			&:hover {
+				border: none;
+			}
+		}
+	}
+	&__pagination {
+		text-align: center;
+		.pagination {
+			justify-content: center;
+			display: inline-block;
+			a {
+				color: #333;
+				margin: 0 10px;
+				&:hover {
+					border: none;
+					color: #fff;
+					background: $primary;
+				}
+			}
+			a, span {
+				padding: 5px 10px;
+			}
+			.current {
+				background: $primary;
+				color: #fff;
+			}
+		}
+	}
+}
+
+//------------- Filter dropdown menu -------------
+
+.filter-options {
+	margin-bottom: 20px;
+}
+
+.filter-toggle {
+	display: inline-flex;
+	cursor: pointer;
+	position: relative;
+	align-items: center;
+	background: none;
+	border: 0;
+	color: $primary;
+	&:hover {
+		border-bottom: 0 !important;
+		color: $primary !important;
+		span {
+			background-color: $primary;
+		}
+	}
+	&__dropdown {
+		display: none;
+		list-style: none;
+		padding: 0;
+		background: #fff;
+		top: 4vw;
+		z-index: 2;
+		margin-bottom: 40px;
+		li {
+			padding: 10px;
+			display: inline-block;
+			border-right: 1px solid $gray;
+			width: 100%;
+			@include mq(tablet) {
+				width: auto;
+			}
+			&:hover {
+				cursor: pointer;
+				background: $primary;
+				color: #fff;
+			}
+		}
+	}
+	&__label {
+		margin-left: 10px;
+	}
+}
+
+.filter-reset {
+	background: none;
+	border: 0;
+	color: $primary;
+	cursor: pointer;
+	margin-left: 10px;
+	&:hover {
+		color: $primary;
+		i {
+			color: $primary;
+		}
+	}
+	i {
+		color: $gray--dark;
+		@include font(2rem);
+	}
+}
+
+.filter-form {
+	display: none;
+}

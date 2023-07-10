@@ -1,0 +1,119 @@
+// CLIENT-PROVIDED EMBED WIDGETS
+
+// Advanced search widget
+//---------------------------
+
+#realscout--kingdom #realscout--kingdom__castle #kingdom--castle #kingdom--castle__throne .search--advanced {
+	padding: 0;
+}
+
+#realscout--kingdom #realscout--kingdom__castle #kingdom--castle #kingdom--castle__throne .search--body {
+	background-color: transparent !important;
+}
+
+#realscout--kingdom #realscout--kingdom__castle #kingdom--castle #kingdom--castle__throne .search--input-area {
+	padding: 0;
+	@include mq('desktop') {
+		display: flex;
+		align-items: center;
+	}
+}
+
+#realscout--kingdom #realscout--kingdom__castle #kingdom--castle #kingdom--castle__throne .search--input input,
+#realscout--kingdom #realscout--kingdom__castle #kingdom--castle #kingdom--castle__throne .search--select select {
+	border: 0;
+	border-radius: 0;
+	border-bottom: 2px solid #000;
+	color: #000;
+}
+
+#kingdom--castle__throne .search--advanced .row {
+	@include mq('desktop') {
+		margin: 0 10px !important;
+	}
+}
+
+#realscout--kingdom #realscout--kingdom__castle #kingdom--castle #kingdom--castle__throne .search--button {
+	flex: 40%;
+	margin: 20px 0 0 !important;
+	@include mq('desktop') {
+		margin: 0 !important;
+	}
+}
+
+#realscout--kingdom #realscout--kingdom__castle #kingdom--castle #kingdom--castle__throne .search--button button {
+	@extend .btn;
+	padding: 20px 10px !important;
+	line-height: 0;
+}
+
+// Listings grid
+//---------------------------
+
+.realscout-listings {
+	position: relative;
+	z-index: 1;
+}
+
+#realscout--kingdom #realscout--kingdom__castle #kingdom--castle #kingdom--castle__throne .realscout--pagination li.active {
+	background: $primary;
+}
+
+#realscout--kingdom #realscout--kingdom__castle #kingdom--castle #kingdom--castle__throne .realscout--pagination li:first-child,
+#realscout--kingdom #realscout--kingdom__castle #kingdom--castle #kingdom--castle__throne .realscout--pagination li:last-child {
+	background: transparent;
+}
+
+#realscout--kingdom #realscout--kingdom__castle #kingdom--castle #kingdom--castle__throne a {
+	cursor: pointer;
+}
+
+#realscout--kingdom #realscout--kingdom__castle #kingdom--castle #kingdom--castle__throne a:hover {
+	color: $primary;
+}
+
+// Home valuation widget
+//---------------------------
+
+.buyside_widget_input_div input {
+	padding: 10px;
+}
+
+#buyside_widget_submit_id {
+	@extend .btn;
+	background: #fff !important;
+	padding: 10px !important;
+	color: $text-dark;
+	&:hover {
+		background: $primary !important;
+		color: $text-light !important;
+		border: 1px solid #fff !important;
+	}
+}
+
+#buyside-widget-container > div {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.buyside_widget_input_div {
+	width: 100%;
+}
+
+// Testimonials widget
+//---------------------------
+
+#TestimonialTree_Widget_39444 {
+	.currentPageDiv {
+		@include mq('tablet') {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		> section {
+			@include mq('tablet') {
+				padding: 20px;
+				flex: 50%;
+			}
+		}
+	}
+}

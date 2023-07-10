@@ -1,0 +1,29 @@
+.full-width-text-image {
+	&:nth-of-type(even) {
+		.fl-col-group {
+			display: flex;
+			flex-wrap: wrap-reverse;
+			@include mq(desktop) {
+				flex-wrap: wrap;
+			}
+		}
+	}
+	.fl-module-photo {
+		img {
+			object-fit: cover;
+			width: 100vw;
+			@include mq(tablet) {
+				min-height: 55vw;
+			}
+			@include mq(tablet-medium) {
+				min-height: 60vw;
+			}
+			@include mq(desktop) {
+				min-height: 50vw;
+			}
+			@include mq(desktop-wide) {
+				min-height: 40vw;
+			}
+		}
+	}
+}
